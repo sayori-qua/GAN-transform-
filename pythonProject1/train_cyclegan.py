@@ -3,7 +3,6 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-
 class ResidualBlock(nn.Module):
     def __init__(self, in_features):
         super().__init__()
