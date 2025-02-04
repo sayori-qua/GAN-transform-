@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neural Style Transfer</title>
+</head>
+<body>
+    <h1>Image Style Transfer</h1>
+    <form method="post" enctype="multipart/form-data" action="/transform">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Transform Image</button>
+    </form>
+
+    {% if result %}
+    <h2>Result:</h2>
+    <img src="data:image/png;base64,{{ result }}" alt="Transformed Image">
+    {% endif %}
+</body>
+</html>
